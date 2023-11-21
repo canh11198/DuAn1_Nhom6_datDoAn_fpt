@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_TrangChu"
+        android:icon="@drawable/baseline_house_24"
+        android:title="Trang Chủ" />
+    <item android:id="@+id/item_gioHang"
+        android:icon="@drawable/baseline_local_grocery_store_24"
+        android:title="Giỏ hàng"/>
+    <item android:id="@+id/item_TaiKhoan"
+        android:title="Tài Khoản"
+        android:icon="@drawable/baseline_account_circle_24"/>
+</menu>

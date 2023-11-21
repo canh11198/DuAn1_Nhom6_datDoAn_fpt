@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Khám phá món ăn ưa thích của bạn"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="casual"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/material_on_background_emphasis_medium"
+                android:gravity="center"/>
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/image_slider"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                app:iss_auto_cycle="true"
+                app:iss_delay="1000"
+                app:iss_period="1000"
+                app:iss_text_align="CENTER" />
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/Search_TrangChu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:iconifiedByDefault="false"
+                app:queryHint="Search..." />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loại món ăn :"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-thin"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_trangchu_Loai_mA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:itemCount="5"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Danh sách Món ăn :"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-thin"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_trangChu_DS_MA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_danhsachmon_frmt_trangchu" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
