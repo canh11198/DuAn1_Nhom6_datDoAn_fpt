@@ -1,70 +1,70 @@
 package canhptph44323.fpoly.alo.duan1_nhom6_application.Models;
 
 public class MonAN {
-    private int ID_MON_AN;
-    private String TEN_MON;
-    private String MO_TA;
-    private Double GIA;
-    private byte[] ANH;
-    private int id_loaiMonAn;
+    private int id;
+    private String type;
+    private String img;
+    private String name;
+    private String des;
+    private int price;
 
     public MonAN() {
     }
 
-    public MonAN(int ID_MON_AN, String TEN_MON, String MO_TA, Double GIA, byte[] ANH, int id_loaiMonAn) {
-        this.ID_MON_AN = ID_MON_AN;
-        this.TEN_MON = TEN_MON;
-        this.MO_TA = MO_TA;
-        this.GIA = GIA;
-        this.ANH = ANH;
-        this.id_loaiMonAn = id_loaiMonAn;
+    public MonAN(int id, String type, String img, String name, String des, int price) {
+        this.id = id;
+        this.type = type;
+        this.img = img;
+        this.name = name;
+        this.des = des;
+        this.price = price;
     }
 
-    public int getID_MON_AN() {
-        return ID_MON_AN;
+    public int getId() {
+        return id;
     }
 
-    public void setID_MON_AN(int ID_MON_AN) {
-        this.ID_MON_AN = ID_MON_AN;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getTEN_MON() {
-        return TEN_MON;
+    public String getType() {
+        return type;
     }
 
-    public void setTEN_MON(String TEN_MON) {
-        this.TEN_MON = TEN_MON;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public String getMO_TA() {
-        return MO_TA;
+    public String getImg() {
+        return img;
     }
 
-    public void setMO_TA(String MO_TA) {
-        this.MO_TA = MO_TA;
+    public void setImg(String img) {
+        this.img = img;
     }
 
-    public Double getGIA() {
-        return GIA;
+    public String getName() {
+        return name;
     }
 
-    public void setGIA(Double GIA) {
-        this.GIA = GIA;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public byte[] getANH() {
-        return ANH;
+    public String getDes() {
+        return des;
     }
 
-    public void setANH(byte[] ANH) {
-        this.ANH = ANH;
+    public void setDes(String des) {
+        this.des = des;
     }
 
-    public int getId_loaiMonAn() {
-        return id_loaiMonAn;
+    public int getPrice() {
+        return price;
     }
 
-    public void setId_loaiMonAn(int id_loaiMonAn) {
-        this.id_loaiMonAn = id_loaiMonAn;
+    public void setPrice(int price) {
+        this.price = price;
     }
 }

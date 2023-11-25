@@ -20,13 +20,13 @@ public class Man_Hinh_Cho_MainActivity extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Man_Hinh_Cho_MainActivity.this, Dang_ki_MainActivity.class));
+                startActivity(new Intent(Man_Hinh_Cho_MainActivity.this, Register_MainActivity.class));
             }
         });
         txtSign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Man_Hinh_Cho_MainActivity.this, Dang_Nhap_MainActivity .class));
+                startActivity(new Intent(Man_Hinh_Cho_MainActivity.this, Login_MainActivity.class));
             }
         });
     }

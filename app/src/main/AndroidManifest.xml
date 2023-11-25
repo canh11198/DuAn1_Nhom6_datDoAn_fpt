@@ -15,6 +15,9 @@
         android:theme="@style/Theme.DuAn1_Nhom6_Application"
         tools:targetApi="31">
         <activity
+            android:name=".ChiTiet_MA_MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".KhachHang_pk.Pho_MainActivity_KH"
             android:exported="false" />
         <activity
@@ -30,10 +33,10 @@
             android:name=".TrangChu_MainActivity"
             android:exported="false" />
         <activity
-            android:name=".Dang_ki_MainActivity"
+            android:name=".Register_MainActivity"
             android:exported="false" />
         <activity
-            android:name=".Dang_Nhap_MainActivity"
+            android:name=".Login_MainActivity"
             android:exported="false" />
         <activity
             android:name=".Man_Hinh_Cho_MainActivity"

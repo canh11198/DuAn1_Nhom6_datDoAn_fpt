@@ -13,7 +13,7 @@ import android.widget.Toast;
 import canhptph44323.fpoly.alo.duan1_nhom6_application.Dao.KhachHang_Dao;
 import canhptph44323.fpoly.alo.duan1_nhom6_application.Models.KhachHang;
 
-public class Dang_ki_MainActivity extends AppCompatActivity {
+public class Register_MainActivity extends AppCompatActivity {
     EditText edtTaiKhoanDK, edtMl_sdtDK, edtMatKhauDK, edtMatKhauDK2;
     TextView txtchuyenDN;
     Button btnDangKi;
@@ -34,7 +34,7 @@ public class Dang_ki_MainActivity extends AppCompatActivity {
         txtchuyenDN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Dang_ki_MainActivity.this, Dang_Nhap_MainActivity.class));
+                startActivity(new Intent(Register_MainActivity.this, Login_MainActivity.class));
             }
         });
         btnDangKi.setOnClickListener(new View.OnClickListener() {
@@ -45,7 +45,7 @@ public class Dang_ki_MainActivity extends AppCompatActivity {
                 String mk_DK = edtMatKhauDK.getText().toString();
                 int validationResult = validate();
                 if (validationResult == 1) {
-                    khachHang_dao = new KhachHang_Dao(Dang_ki_MainActivity.this);
+                    khachHang_dao = new KhachHang_Dao(Register_MainActivity.this);
                     khachHang = new KhachHang();
                     khachHang.setTEN_KH(taikhoanDK);
                     khachHang.setEMAIL_KH(sdt);
@@ -53,10 +53,10 @@ public class Dang_ki_MainActivity extends AppCompatActivity {
 
                     long result = khachHang_dao.insert(khachHang);
                     if (result > 0) {
-                        Toast.makeText(Dang_ki_MainActivity.this, "Đăng kí thành Công", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(Dang_ki_MainActivity.this, Dang_Nhap_MainActivity.class));
+                        Toast.makeText(Register_MainActivity.this, "Đăng kí thành Công", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(Register_MainActivity.this, Login_MainActivity.class));
                     } else {
-                        Toast.makeText(Dang_ki_MainActivity.this, "đăng kí thất bại", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Register_MainActivity.this, "đăng kí thất bại", Toast.LENGTH_SHORT).show();
                     }
                 }
 
