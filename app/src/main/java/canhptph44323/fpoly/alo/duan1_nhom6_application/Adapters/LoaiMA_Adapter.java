@@ -42,18 +42,18 @@ public class LoaiMA_Adapter extends RecyclerView.Adapter<LoaiMA_Adapter.Loai_vie
 
     @Override
     public void onBindViewHolder(@NonNull Loai_viewholder holder, int position) {
-    holder.txt_tenloai_item_TT.setText(items.get(position).getTenMonAn());
-        int drawableResourceId = holder.itemView.getResources().getIdentifier(items.get(position).getANH_LOAI(),
-                "drawable",holder.itemView.getContext().getPackageName());
-        Glide.with(holder.itemView.getContext())
-                .load(drawableResourceId).transform(new GranularRoundedCorners(30,30,0,0))
-                .into(holder.img_itemLoai_trangchu);
-
-        holder.itemView.setOnClickListener(v -> {
-            if (listener != null) {
-                listener.onItemClick(position);
-            }
-        });
+//    holder.txt_tenloai_item_TT.setText(items.get(position).getTenMonAn());
+//        int drawableResourceId = holder.itemView.getResources().getIdentifier(items.get(position).getANH_LOAI(),
+//                "drawable",holder.itemView.getContext().getPackageName());
+//        Glide.with(holder.itemView.getContext())
+//                .load(drawableResourceId).transform(new GranularRoundedCorners(30,30,0,0))
+//                .into(holder.img_itemLoai_trangchu);
+//
+//        holder.itemView.setOnClickListener(v -> {
+//            if (listener != null) {
+//                listener.onItemClick(position);
+//            }
+//        });
     }
 
     @Override

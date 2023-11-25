@@ -13,7 +13,7 @@ import android.widget.Toast;
 import canhptph44323.fpoly.alo.duan1_nhom6_application.Dao.Admin_Dao;
 import canhptph44323.fpoly.alo.duan1_nhom6_application.Dao.KhachHang_Dao;
 
-public class Dang_Nhap_MainActivity extends AppCompatActivity {
+public class Login_MainActivity extends AppCompatActivity {
     EditText edtTaiKhoanDN,edtMatKhauDN;
     Button btnDangNhap;
     TextView txtchuyenDKi;
@@ -32,7 +32,7 @@ public class Dang_Nhap_MainActivity extends AppCompatActivity {
         txtchuyenDKi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               startActivity( new Intent(Dang_Nhap_MainActivity.this, Dang_ki_MainActivity.class));
+               startActivity( new Intent(Login_MainActivity.this, Register_MainActivity.class));
             }
         });
         btnDangNhap.setOnClickListener(new View.OnClickListener() {
@@ -41,18 +41,18 @@ public class Dang_Nhap_MainActivity extends AppCompatActivity {
                 String tk_DN = edtTaiKhoanDN.getText().toString();
                 String mk_DN = edtMatKhauDN.getText().toString();
                 if (tk_DN.isEmpty() || mk_DN.isEmpty()){
-                    Toast.makeText(Dang_Nhap_MainActivity.this, "thiếu TK hoặc MK", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login_MainActivity.this, "thiếu TK hoặc MK", Toast.LENGTH_SHORT).show();
                 }else {
                     if(admin_dao.checkLogin(tk_DN,mk_DN)==1){
-                        Intent intent= new Intent(Dang_Nhap_MainActivity.this, MainActivity.class);
+                        Intent intent= new Intent(Login_MainActivity.this, MainActivity.class);
                         startActivity(intent);
-                        Toast.makeText(Dang_Nhap_MainActivity.this, "Đăng nhập Tk admin ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login_MainActivity.this, "Đăng nhập Tk admin ", Toast.LENGTH_SHORT).show();
                     } else if (khachHang_dao.checkLogin(tk_DN,mk_DN)==1) {
-                        Intent intent= new Intent(Dang_Nhap_MainActivity.this, TrangChu_MainActivity.class);
+                        Intent intent= new Intent(Login_MainActivity.this, TrangChu_MainActivity.class);
                         startActivity(intent);
-                        Toast.makeText(Dang_Nhap_MainActivity.this, "Đăng nhập TK Khach hàng", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login_MainActivity.this, "Đăng nhập TK Khach hàng", Toast.LENGTH_SHORT).show();
                     }else {
-                        Toast.makeText(Dang_Nhap_MainActivity.this, "Sai Tk hoặc Mk", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login_MainActivity.this, "Sai Tk hoặc Mk", Toast.LENGTH_SHORT).show();
                     }
                 }
 

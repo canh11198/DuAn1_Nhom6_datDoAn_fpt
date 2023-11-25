@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/purple_800"
     android:orientation="vertical"
-    tools:context=".Dang_Nhap_MainActivity">
+    tools:context=".Login_MainActivity">
     <ImageView
             android:id="@+id/imgDN"
             android:layout_width="match_parent"

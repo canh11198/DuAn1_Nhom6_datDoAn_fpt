@@ -1,6 +1,6 @@
 package canhptph44323.fpoly.alo.duan1_nhom6_application.Models;
 
-public class MonAN {
+public class Foods {
     private int id;
     private String type;
     private String img;
@@ -8,10 +8,10 @@ public class MonAN {
     private String des;
     private int price;
 
-    public MonAN() {
+    public Foods() {
     }
 
-    public MonAN(int id, String type, String img, String name, String des, int price) {
+    public Foods(int id, String type, String img, String name, String des, int price) {
         this.id = id;
         this.type = type;
         this.img = img;

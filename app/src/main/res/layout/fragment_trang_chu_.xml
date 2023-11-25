@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EFEFED"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ScrollView
@@ -15,71 +16,178 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ăn Ngon Mỗi Ngày"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="casual"
+                    android:layout_marginTop="0dp"
+                    android:textColor="@color/material_on_background_emphasis_medium"
+                    android:gravity="center"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/boder_radius_search"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/ed_fragment_Trangchu_search"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="8dp"
+                        android:layout_weight="7"
+                        android:background="@color/white"
+                        android:hint="Tên món ăn ?"
+
+                        android:paddingLeft="10dp" />
+
+
+                    <ImageButton
+                        android:id="@+id/btn_fragment_Trangchu_tapSearch"
+                        android:layout_width="35dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/icon_search1" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/image_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    app:iss_auto_cycle="true"
+                    app:iss_delay="1000"
+                    app:iss_period="1000"
+                    app:iss_text_align="CENTER" />
+            </RelativeLayout>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Khám phá món ăn ưa thích của bạn"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:fontFamily="casual"
-                android:layout_marginTop="30dp"
-                android:textColor="@color/material_on_background_emphasis_medium"
-                android:gravity="center"/>
-
-            <com.denzcoskun.imageslider.ImageSlider
-                android:id="@+id/image_slider"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="20dp"
-                app:iss_auto_cycle="true"
-                app:iss_delay="1000"
-                app:iss_period="1000"
-                app:iss_text_align="CENTER" />
-
-            <androidx.appcompat.widget.SearchView
-                android:id="@+id/Search_TrangChu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:iconifiedByDefault="false"
-                app:queryHint="Search..." />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Loại món ăn :"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:text="Loại đồ ăn"
+                android:textSize="20dp"
+                android:textStyle="bold|italic" />
+            <LinearLayout
                 android:layout_marginTop="10dp"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:fontFamily="sans-serif-thin"/>
+                android:layout_marginHorizontal="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/iv_home_typeFood1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/bunhaisan"
+                        />
+                    <TextView
+                        android:id="@+id/tv_home_typeFood1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phở"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/iv_home_typeFood2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/buasang1"
+                        />
+                    <TextView
+                        android:id="@+id/tv_home_typeFood2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bún"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/iv_home_typeFood3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/buasang2"
+                        />
+                    <TextView
+                        android:id="@+id/tv_home_typeFood3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bánh mì"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Danh sách món ăn"
+                    android:textSize="20dp"
+                    android:textStyle="bold|italic" />
+                <TextView
+                    android:id="@+id/tv_home_getAll"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Xem tất cả"
+                    android:gravity="right"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="#2196F3"
+                    android:textSize="15dp"
+                    android:textStyle="italic" />
+            </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcv_trangchu_Loai_mA"
+                android:background="#F8FBFF"
+                android:id="@+id/recy_fragment_Trangchu_listFood"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                android:orientation="horizontal"
-                tools:itemCount="5"
-                />
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="10dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Danh sách Món ăn :"
-                android:layout_marginTop="20dp"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:fontFamily="sans-serif-thin"/>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcv_trangChu_DS_MA"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/item_danhsachmon_frmt_trangchu" />
+
+
+
 
         </LinearLayout>
 
