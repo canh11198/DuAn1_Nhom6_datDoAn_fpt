@@ -16,4 +16,11 @@
     <item android:id="@+id/item_QuanLyLichSu"
         android:title="Quản Lý Lịch Sử"
         android:icon="@drawable/baseline_history_24"/>
+    <item android:id="@+id/item_DoiMatKhau"
+        android:title="Đổi mật khẩu"
+        android:icon="@drawable/baseline_password_24"/>
+    <item android:id="@+id/item_DangXuat"
+        android:title="Đăng xuất"
+        android:icon="@drawable/baseline_logout_24"/>
+
 </menu>

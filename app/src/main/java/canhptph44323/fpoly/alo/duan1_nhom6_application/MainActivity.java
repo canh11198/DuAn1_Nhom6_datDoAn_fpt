@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
@@ -68,6 +69,13 @@ public class MainActivity extends AppCompatActivity {
                 } else if (id==R.id.item_QuanLyLichSu) {
                     doifgm(new QuanLy_lichSu_dat_Fragment());
                     toolbar.setTitle(item.getTitle());
+                }
+
+                else if (item.getItemId()==R.id.item_DangXuat) {
+                    Intent intent = new Intent(MainActivity.this,Login_MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+
                 }
                 drawerLayout.closeDrawer(GravityCompat.START);
                 return false;
