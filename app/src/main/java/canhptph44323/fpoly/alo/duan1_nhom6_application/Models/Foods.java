@@ -2,11 +2,11 @@ package canhptph44323.fpoly.alo.duan1_nhom6_application.Models;
 
 public class Foods {
     private int id;
-    private String type;
-    private String img;
-    private String name;
-    private String des;
-    private int price;
+        private String type;
+        private String img;
+        private String name;
+        private String des;
+        private int price;
 
     public Foods() {
     }

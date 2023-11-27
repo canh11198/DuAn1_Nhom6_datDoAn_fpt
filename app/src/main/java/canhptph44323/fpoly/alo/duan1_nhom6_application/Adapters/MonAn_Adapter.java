@@ -24,6 +24,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
+import canhptph44323.fpoly.alo.duan1_nhom6_application.ChiTiet_MA_MainActivity;
 import canhptph44323.fpoly.alo.duan1_nhom6_application.Dao.GioHang_Dao;
 import canhptph44323.fpoly.alo.duan1_nhom6_application.Dao.MonAn_Dao;
 import canhptph44323.fpoly.alo.duan1_nhom6_application.Fragment.TrangChu_Fragment;
@@ -85,26 +86,26 @@ public class MonAn_Adapter extends RecyclerView.Adapter<MonAn_Adapter.MonAN_View
                 btnSubmit.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-//                        GioHang_Dao gioHang_dao = new GioHang_Dao(context);
-//                        Gio_Hang gio_hang = new Gio_Hang();
-//                        gio_hang.setIdFood(monAN.getId());
-//                        gio_hang.setQuanti(1);
-//                        gio_hang.setSum(monAN.getPrice());
-//                        SharedPreferences sharedPreferences = context.getSharedPreferences("USER_FILE", Context.MODE_PRIVATE);
-//                        String usernameLogged = sharedPreferences.getString("USERNAME", "");
-//                        gio_hang.setUsername(usernameLogged);
-//                        if (!gioHang_dao.FoodExists(gio_hang.getIdFood(), gio_hang.getUsername())) {
-//                            if (gioHang_dao.insert(gio_hang) > 0) {
-//                                Toast.makeText(context, "đã thêm vào giỏ hàng", Toast.LENGTH_SHORT).show();
-//                                dialog.dismiss();
-//                            }else {
-//                                Toast.makeText(context, "không Thêm Vào Giỏ Hàng", Toast.LENGTH_SHORT).show();
-//                            }
-//
-//                    }else {
-//                            Toast.makeText(context, "Món ăn đã được chọn", Toast.LENGTH_SHORT).show();
-//                            dialog.dismiss();
-//                        }
+                        GioHang_Dao gioHang_dao = new GioHang_Dao(context);
+                        Gio_Hang gio_hang = new Gio_Hang();
+                        gio_hang.setIdFood(monAN.getId());
+                        gio_hang.setQuanti(1);
+                        gio_hang.setSum(monAN.getPrice());
+                        SharedPreferences sharedPreferences = context.getSharedPreferences("USER_FILE", Context.MODE_PRIVATE);
+                        String usernameLogged = sharedPreferences.getString("USERNAME", "");
+                        gio_hang.setUsername(usernameLogged);
+                        if (!gioHang_dao.FoodExists(gio_hang.getIdFood(), gio_hang.getUsername())) {
+                            if (gioHang_dao.insert(gio_hang) > 0) {
+                                Toast.makeText(context, "đã thêm vào giỏ hàng", Toast.LENGTH_SHORT).show();
+                                dialog.dismiss();
+                            }else {
+                                Toast.makeText(context, "không Thêm Vào Giỏ Hàng", Toast.LENGTH_SHORT).show();
+                            }
+
+                    }else {
+                            Toast.makeText(context, "Món ăn đã được chọn", Toast.LENGTH_SHORT).show();
+                            dialog.dismiss();
+                        }
 
                 }
             });
@@ -124,7 +125,13 @@ public class MonAn_Adapter extends RecyclerView.Adapter<MonAn_Adapter.MonAN_View
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(context, ChiTiet_MA_MainActivity.class);
+                i.putExtra("foodImg", list.get(position).getImg());
+                i.putExtra("foodName", list.get(position).getName());
+                i.putExtra("foodDes", list.get(position).getDes());
+                i.putExtra("foodPrice", list.get(position).getPrice());
+                i.putExtra("foodId",list.get(position).getId());
+                context.startActivity(i);
             }
         });
 //        MonAN monAN= list.get(position);
@@ -167,10 +174,4 @@ public class MonAN_Viewholder extends RecyclerView.ViewHolder {
 
 }
 
-//                Intent i = new Intent(context, ItemInforFood.class);
-//                i.putExtra("foodImg", list.get(position).getImg());
-//                i.putExtra("foodName", list.get(position).getName());
-//                i.putExtra("foodDes", list.get(position).getDes());
-//                i.putExtra("foodPrice", list.get(position).getPrice());
-//                i.putExtra("foodId",list.get(position).getId());
-//                context.startActivity(i);
+

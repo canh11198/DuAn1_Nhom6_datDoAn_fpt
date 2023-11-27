@@ -9,7 +9,7 @@
     tools:context=".ChiTiet_MA_MainActivity">
 
     <RelativeLayout
-        android:background="@color/main_red"
+        android:background="#D5B65B"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:text="Bún chả khánh pro"
+                android:text="Bún chả "
                 android:textSize="26dp"
                 android:textStyle="bold" />
 
@@ -156,7 +156,7 @@
         android:layout_height="0dp"
         android:layout_weight="0.6"
         android:layout_gravity="center"
-        android:backgroundTint="@color/main_red"
+        android:backgroundTint="#D6B759"
         android:text="Thêm vào giỏ hàng" />
 
 

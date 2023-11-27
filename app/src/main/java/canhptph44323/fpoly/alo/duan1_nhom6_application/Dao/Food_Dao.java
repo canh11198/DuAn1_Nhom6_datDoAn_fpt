@@ -1,6 +1,7 @@
 package canhptph44323.fpoly.alo.duan1_nhom6_application.Dao;
 
 import android.annotation.SuppressLint;
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -39,6 +40,15 @@ public class Food_Dao {
         }
         return list;
     }
+    public long insert(Foods food) {
+        ContentValues values = new ContentValues();
+        values.put("typeFood_typeName", food.getType());
+        values.put("food_img", food.getImg());
+        values.put("food_name", food.getName());
+        values.put("food_description", food.getDes());
+        values.put("food_price", food.getPrice());
+        return sqLiteDatabase.insert("tbl_food", null, values);
+    }
 
     @SuppressLint("Range")
     public ArrayList<Foods> Search(String ten) {
@@ -60,5 +70,13 @@ public class Food_Dao {
             while (cursor.moveToNext());
         }
         return list;
+    }
+    public Foods getById(int id) {
+        Cursor cursor = sqLiteDatabase.query("tbl_food", null, "food_id = ?", new String[]{String.valueOf(id)}, null, null, null);
+        if (cursor.moveToNext()) {
+            return new Foods(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getInt(5));
+        } else {
+            return null;
+        }
     }
 }

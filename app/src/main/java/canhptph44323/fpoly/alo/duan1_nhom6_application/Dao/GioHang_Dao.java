@@ -58,4 +58,19 @@ public class GioHang_Dao {
         cursor.close();
         return exists;
     }
+    public ArrayList<Gio_Hang> getByUser(String user) {
+        String sql = "SELECT * FROM tbl_cart  where user_name = ?";
+        return getData(sql, user);
+    }
+    public long updateSum(Gio_Hang gio_hang){
+        ContentValues values = new ContentValues();
+        values.put("food_id", gio_hang.getIdFood());
+        values.put("cart_quantity", gio_hang.getQuanti());
+        values.put("cart_sum", gio_hang.getSum());
+        values.put("user_name",gio_hang.getUsername());
+        return sqLiteDatabase.update("tbl_cart", values, "cart_id = ?", new String[]{String.valueOf(gio_hang.getIdCart())});
+    }
+    public int delete(int ID) {
+        return sqLiteDatabase.delete("tbl_cart", "cart_id = ?", new String[]{String.valueOf(ID)});
+    }
 }
